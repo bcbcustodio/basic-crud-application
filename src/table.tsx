@@ -30,7 +30,6 @@ export default function CustomizedTables() {
   const [userList, setUserList] = useState<RowDetails[]>([])
 
   const submit = async () => {
-    console.log('here')
     await Axios.post('http://localhost:3001/routes/create', {
       fullName: fullName,
       age: age,
