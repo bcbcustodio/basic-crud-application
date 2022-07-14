@@ -29,7 +29,7 @@ const routes = function (app: Express, connection: DataSource) {
       const user = await repository.find()
       return res.status(200).send(user)
     } catch (e) {
-      console.log('Error Creating Data.\n' + e)
+      console.log('Error Reading Data.\n' + e)
     }
   })
 
@@ -45,7 +45,7 @@ const routes = function (app: Express, connection: DataSource) {
       const user = await repository.findOneAndUpdate({ _id: new ObjectId(id) }, { $set: updateArgs })
       return res.status(200).send(user)
     } catch (e) {
-      console.log('Error Creating Data.\n' + e)
+      console.log('Error Updating Data.\n' + e)
     }
   })
 
@@ -56,7 +56,7 @@ const routes = function (app: Express, connection: DataSource) {
       const user = await repository.findOneAndDelete({ _id: new ObjectId(id) })
       return res.status(200).send(user)
     } catch (e) {
-      console.log('Error Creating Data.\n' + e)
+      console.log('Error Deleting Data.\n' + e)
     }
   })
 }
