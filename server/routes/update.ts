@@ -2,7 +2,6 @@ import { DataSource } from 'typeorm'
 import { Express } from 'express'
 import { UserData } from '../entities/userData'
 import { ObjectId } from 'mongodb'
-
 interface UpdateArgs {
   fullName?: string
   age?: number
